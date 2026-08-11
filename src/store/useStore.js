@@ -66,6 +66,7 @@ const useStore = create(devtools(persist((set, get) => ({
   conversations: [],
   addConversation: (conv) => set((state) => ({ conversations: [conv, ...state.conversations] })),
   updateConversation: (id, patch) => set((state) => ({ conversations: state.conversations.map((c) => (c.id === id ? { ...c, ...patch } : c)) })),
+  clearConversations: () => set({ conversations: [] }),
 
   // Helpers to load initial mock data
   initializeFromMocks: (mocks) => {

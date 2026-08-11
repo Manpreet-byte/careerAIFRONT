@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react'
 import { getMe, signOut as apiSignOut } from '../services/authService'
+import useStore from '../store/useStore'
 
 const AuthContext = createContext(null)
 
@@ -38,6 +39,7 @@ export function AuthProvider({ children }) {
     } finally {
       setUser(null)
       localStorage.removeItem('careerai_token')
+      useStore.getState().clearConversations()
     }
   }
 
