@@ -1,0 +1,5 @@
+import { Link } from 'react-router-dom'
+
+export default function Footer() {
+  return <footer className="bg-cream px-5 py-14 sm:px-8 lg:px-12"><div className="mx-auto grid max-w-[1400px] gap-10 border-t border-mocha/10 pt-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]"><div><Link to="/" className="font-serif text-3xl tracking-[0.18em]">BELLAVUE</Link><p className="mt-5 max-w-sm leading-7 text-text/62">Premium leather handbags and accessories shaped by Italian craft, modern restraint, and warm material beauty.</p></div>{[['Shop',['Handbags','Totes','Crossbody','Travel']],['Atelier',['Craftsmanship','Materials','Care Guide','Sustainability']],['Visit',['Milan Boutique','New York Studio','Support','Instagram']]].map(([title, items]) => <div key={title}><h3 className="mb-5 text-xs uppercase tracking-[0.25em] text-mocha">{title}</h3><div className="grid gap-3 text-text/62">{items.map((item) => <span key={item}>{item}</span>)}</div></div>)}</div><div className="mx-auto mt-12 flex max-w-[1400px] justify-between border-t border-mocha/10 pt-7 text-sm text-text/50"><span>© 2026 Bellavue Atelier</span><span>Quiet luxury, made slowly.</span></div></footer>
+}
