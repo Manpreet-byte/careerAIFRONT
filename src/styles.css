@@ -74,6 +74,27 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .table-card { @apply overflow-hidden rounded-3xl border border-border bg-white shadow-card; }
   .scrollbar-invisible { scrollbar-width: none; -ms-overflow-style: none; }
   .scrollbar-invisible::-webkit-scrollbar { display: none; }
+  
+  /* Redesign Utilities */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500;
+  }
+  .text-gradient-light {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-300;
+  }
+  .glass-dark {
+    @apply border border-white/10 bg-slate-900/40 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.36)];
+  }
+  .dark-surface {
+    @apply bg-slate-950 text-white;
+  }
+  .mesh-bg {
+    background-color: #020617;
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+      radial-gradient(at 50% 0%, hsla(225,39%,30%,0.2) 0, transparent 50%), 
+      radial-gradient(at 100% 0%, hsla(339,49%,30%,0.2) 0, transparent 50%);
+  }
 }
 
 @media (min-width: 1600px) {
